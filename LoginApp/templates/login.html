@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!-- Define que el documento esta bajo el estandar de HTML 5 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Login Form</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+</head>
+<body>
+	<form method="POST" action="/loginAction/">
+             {% csrf_token %}
+             <h1>Bienvenido</h1>
+             <h3>{{ err }}</h3>
+             <input type="text" name="usu" placeholder="Usuario" required="required"/>
+             <input type="password" name="pass" placeholder="Contraseña" required="required"/>
+             <button type="submit" class="btn btn-primary btn-block btn-large">Login</button>
+         </form>
+</body>
+</html>
