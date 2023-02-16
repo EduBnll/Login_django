@@ -6,18 +6,42 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Login Form</title>
+	<title>Login</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/login.css' %}">
 </head>
 <body>
-	<form method="POST" action="/loginAction/">
-             {% csrf_token %}
-             <h1>Bienvenido</h1>
-             <h3>{{ err }}</h3>
-             <input type="text" name="usu" placeholder="Usuario" required="required"/>
-             <input type="password" name="pass" placeholder="Contraseña" required="required"/>
-             <button type="submit" class="btn btn-primary btn-block btn-large">Login</button>
-         </form>
+<div id="logo">
+  <h1><i> Industria  Disfor S.A. </i></h1>
+</div>
+<section class="stark-login">
+
+  <form method="POST" action="/loginAction/">
+      {% csrf_token %}
+    <div id="fade-box">
+          <input type="text" name="usu" placeholder="Usuario" required="required"/>
+        <input type="password" name="pass" placeholder="Contraseña" required="required"/>
+
+      <button type="submit" class="btn btn-primary btn-block btn-large">Login</button>
+    </div>
+  </form>
+  <div class="hexagons">
+    <span>&#x2B22;</span>
+    <br>
+    <span>&#x2B22;</span>
+    <br>
+    <span>&#x2B22;</span>
+    <br>
+    <span>&#x2B22;</span>
+    <br>
+    <span>&#x2B22;</span>
+  </div>
+</section>
+
+<div id="circle1">
+  <div id="inner-cirlce1">
+    <h2> </h2>
+  </div>
+</div>
 </body>
 </html>
